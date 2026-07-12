@@ -1,0 +1,4 @@
+theia@theia-trevoreckhar:/home/project$ curl http://localho:5000/author/Unknown
+
+theia@theia-trevoreck:5000/author/Unknownurl http://localhost:
+[{"isbn":"4","title":"The Epic Of Gilgamesh","reviews":{}},{"isbn":"5","title":"The Book Of Job","reviews":{}},{"isbn":"6","title":"One Thousand and One Nights","reviews":{}},{"isbn":"7","title":"Njál's Saga","reviews":{}}
