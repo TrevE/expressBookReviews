@@ -34,7 +34,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
 public_users.get('/author/:author',function (req, res) {
     let returnList = [];
     var currAuthor = req.params.author;
-    
+
     for (let isbn in books) {
       if (books[isbn].author === currAuthor) {
         returnList.push({
@@ -49,8 +49,20 @@ public_users.get('/author/:author',function (req, res) {
 
 // Get all books based on title
 public_users.get('/title/:title',function (req, res) {
-  //Write your code here
-  return res.status(300).json({message: "Yet to be implemented"});
+        
+    let returnList = [];
+    var title = req.params.title;
+    
+    for (let isbn in books) {
+        if (books[isbn].title === title) {
+        returnList.push({
+            "isbn": isbn,
+            "author": books[isbn].author,
+            "reviews": books[isbn].reviews
+        });
+        }
+    }
+    return res.status(200).json(returnList);
 });
 
 //  Get book review
