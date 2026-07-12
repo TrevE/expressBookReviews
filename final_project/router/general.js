@@ -126,4 +126,12 @@ public_users.get('/review/:isbn',function (req, res) {
     }
 });
 
+const getBookByAuthorAxios = async (author) => {
+    try {
+        const response = await axios.get(`http://localhost:5000/author/${author}`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching book by author:", error);
+    }
+};
 module.exports.general = public_users;
